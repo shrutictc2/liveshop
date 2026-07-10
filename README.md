@@ -20,12 +20,14 @@ A naive chat feed — `messages.map(m => <div>{m}</div>)` — works fine at 50 m
 - Chat history is capped at 5,000 messages client-side, so a long-running stream doesn't grow memory without bound.
 - There's a **"Simulate spike" button** in the UI that fires 500 messages instantly, plus a live FPS readout, so the performance claim is something you can watch happen rather than take on faith.
 
-**Before/after** _(fill in once you've measured on your machine — see below)_:
+**Before/after**, measured locally (Chrome, MacBook Air) after firing repeated spikes to ~3,300 messages:
 
-| | Without virtualization | With `react-window` |
+| | Without virtualization (`.map()`) | With `react-window` |
 |---|---|---|
-| FPS during 500-msg spike | ~ | ~ |
-| DOM nodes during spike | ~5,000+ | ~15 |
+| FPS during spike | dropped to **25** | steady **60** |
+| Chat row elements in the DOM | **3,333** (one per message) | **14** (only the visible viewport) |
+
+The FPS drop shows up under load; the DOM count difference is the more fundamental story — it holds *regardless* of how demanding the spike is, since react-window only ever mounts what's actually visible on screen.
 
 To reproduce: temporarily swap `ChatFeed`'s `List` for a plain `.map()` render, hit "Simulate spike," and watch the FPS counter and browser devtools' performance tab.
 
