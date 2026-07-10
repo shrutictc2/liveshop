@@ -1,0 +1,62 @@
+.chat-feed {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-feed__header {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8b7fd1;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.chat-feed__list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.chat-row {
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: #f0f2f8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-row__user {
+  color: #ff8fa3;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.chat-row__text {
+  color: rgba(240, 242, 248, 0.85);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-row--reaction {
+  color: rgba(240, 242, 248, 0.6);
+  font-size: 13px;
+}
+
+.chat-row--purchase {
+  background: rgba(255, 184, 77, 0.08);
+  color: #ffb84d;
+}
+
+.chat-row--purchase .chat-row__product {
+  font-weight: 600;
+  color: #ffb84d;
+}
