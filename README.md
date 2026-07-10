@@ -2,7 +2,7 @@
 
 A mini live-shopping stream UI — the kind of interface an SMB merchant would use to sell products during a live broadcast. Built to explore the specific front-end problems that come with real-time, high-frequency UIs: keeping a fast-scrolling chat smooth, throttling animation under load, and structuring components so a live product overlay can update without disrupting playback.
 
-**[Live demo →](#)** _(add your Vercel link after deploying)_
+**[Live demo →](https://liveshop-mocha.vercel.app)**
 
 ![screenshot placeholder](./docs/screenshot.png)
 
