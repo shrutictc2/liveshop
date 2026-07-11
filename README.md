@@ -4,7 +4,7 @@ A mini live-shopping stream UI — the kind of interface an SMB merchant would u
 
 **[Live demo →](https://liveshop-mocha.vercel.app)**
 
-![screenshot placeholder](./docs/screenshot.png)
+![LiveShop demo](./docs/Liveshop.png)
 
 ## Why I built this
 
