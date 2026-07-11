@@ -10,6 +10,8 @@ A mini live-shopping stream UI — the kind of interface an SMB merchant would u
 
 I wanted a project that went past "CRUD app with a nice UI" and actually forced me to think about performance under load — the kind of problem that shows up in real live-streaming products but rarely in tutorial projects. So instead of building something abstract, I simulated an actual live-shopping stream: chat messages, reactions, and purchases arriving continuously, with a product carousel merchants would use to feature items mid-broadcast.
 
+**[Read the full technical writeup →](https://dev.to/shrutictc2/how-i-kept-a-live-chat-feed-smooth-at-3700-messages-1kf6)**
+
 ## The performance problem, concretely
 
 A naive chat feed — `messages.map(m => <div>{m}</div>)` — works fine at 50 messages. It falls apart at a few hundred: every new message re-renders and repaints every row in the DOM, even the ones scrolled out of view. In a live stream, message volume spikes hard right after a product drop or a popular moment, which is exactly when you can't afford dropped frames.
