@@ -4,11 +4,13 @@ A mini live-shopping stream UI — the kind of interface an SMB merchant would u
 
 **[Live demo →](https://liveshop-mocha.vercel.app)**
 
-![screenshot placeholder](./docs/screenshot.png)
+![LiveShop demo](./docs/Liveshop.png)
 
 ## Why I built this
 
 I wanted a project that went past "CRUD app with a nice UI" and actually forced me to think about performance under load — the kind of problem that shows up in real live-streaming products but rarely in tutorial projects. So instead of building something abstract, I simulated an actual live-shopping stream: chat messages, reactions, and purchases arriving continuously, with a product carousel merchants would use to feature items mid-broadcast.
+
+**[Read the full technical writeup →](https://dev.to/shrutictc2/how-i-kept-a-live-chat-feed-smooth-at-3700-messages-1kf6)**
 
 ## The performance problem, concretely
 
